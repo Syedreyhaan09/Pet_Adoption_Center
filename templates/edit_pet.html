@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Pet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>✏️ Edit Pet Details</h1>
+        <form method="POST" class="form-card">
+            <label>Name</label>
+            <input type="text" name="name" value="{{ pet[1] }}" required>
+
+            <label>Type</label>
+            <input type="text" name="type" value="{{ pet[2] }}" required>
+
+            <label>Breed</label>
+            <input type="text" name="breed" value="{{ pet[3] }}" required>
+
+            <label>Description</label>
+            <textarea name="description" required>{{ pet[4] }}</textarea>
+
+            <label>Contact Name</label>
+            <input type="text" name="contact_name" value="{{ pet[5] }}" required>
+
+            <label>Email</label>
+            <input type="email" name="contact_email" value="{{ pet[6] }}" required>
+
+            <label>Contact Number</label>
+            <input type="text" name="contact_phone" value="{{ pet[7] }}" required>
+
+
+            <button type="submit">Update</button>
+            <a href="{{ url_for('index') }}" class="back-link">← Back</a>
+        </form>
+    </div>
+</body>
+
+</html>
